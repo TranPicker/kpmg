@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/semantic.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.min.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/reset.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/scss/ListSession.css">
+    <title>VietJet</title>
+</head>
+<body>
+<div class="container-fluid h-100">
+<div class="row wrapper h-100">
+ <!--menu left-->
+       <div class="container-fluid">
+         <div class="row h-100" >
+                    <!-- Menu-->
+           <nav class="col-md-2 d-md-block sidebar menu-left d-flex align-content-center" id="menuLeft">
+               <div class="brands-kpmg pt-3 d-block m-auto text-uppercase">
+                   <a class="name-brands  text-white mb-1" href="home">
+                   KPMG Clubhouse
+                    </a>
+                    <div class="sologan-brands text-white pt-2">
+                    ppc admin portal
+                    </div>
+                </div>
+                 <div class="sidebar-sticky list-menu">
+                   <ul class="nav flex-column">
+                     <li class="nav-item">
+                       <a class="nav-link active d-flex" href="home">
+                            <i class="fas fa-home mr-3 col-1 pl-0"></i>
+                             Dashboard
+                       </a>
+                     </li>
+                      <li class="nav-item">
+                       <a class="nav-link d-flex" href="staff">
+                            <i class="fas fa-user-tie mr-3 col-1 pl-0"></i>
+                             Staff
+                       </a>
+                     </li>
+                      <li class="nav-item">
+                       <a class="nav-link   d-flex" href="feeds">
+                            <i class="fas fa-file-alt mr-3 col-1 pl-0"></i>
+                             Feeds
+                       </a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link  d-flex" href="#">
+                            <i class="fas fa-cogs mr-3 col-1 pl-0"></i>
+                             Settings
+                       </a>
+                     </li>
+
+                   </ul>
+                 </div>
+           </nav>
+           <!--End Menu-->
+           <div class="content-right content-right col-md-9 ml-sm-auto col-lg-10 px-4">
+               <div role="main" ><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                 <div class="d-flex justify-content-between w-100 flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                     <div class="main-content w-100">
+                      <!--Acount User-->
+                        <div class="acount-user float-right">
+                         <a class="login" href="#">PPC Admin  <i class="far fa-user ml-1"></i> </a>
+                        </div>
+                          <h1 class="title"> Overview: Day</h1>
+                       <!--End Acount User-->
+                        <!--content right-->
+                        <!--content Top-->
+                        <div class="content-top d-flex align-content-center">
+                            <div class="d-block mr-2 search-btn"><i class="fas fa-search fa-2x bg-transparent" id="icon-search"></i></div>
+                            <div class="ui multiple search selection dropdown" id="multi-select">
+                              <input type="hidden" name="profile">
+                              <div class="default text">Choose Profile...</div>
+                              <div class="menu">
+                                  <div class="item" data-value="audit">Audit</div>
+                                  <div class="item" data-value="tax">Tax</div>
+                                  <div class="item" data-value="advisory">Avisory</div>
+                                  <div class="item" data-value="centralsrv">Central Srv</div>
+                              </div>
+                              </div>
+                         </div>
+                         <!--End content Top-->
+                        <!-- show content-->
+                        <div class="show-content-right mt-5">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                           <li class="nav-item ">
+                             <a class="nav-link active text-uppercase" id="live-tab" data-toggle="tab" href="#live" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-eye mr-2"></i>LIVE</a>
+                           </li>
+                           <li class="nav-item">
+                             <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="profile" aria-selected="false">OVERVIEW</a>
+                           </li>
+                           <a href="#" class="chat"><img src="images/icon/ico_chat.png" alt=""></a>
+
+
+                         </ul>
+                         <div class="tab-content rounded" id="myTabContent">
+                           <div class="tab-pane fade show active h-100" id="live" role="tabpanel" aria-labelledby="live-tab">
+                           <!--Content tab-->
+                               <!--report-->
+                               <div class="current-report pt-2 ml-4">
+                                   <div class="current-time d-inline mr-3">7:12 PM</div>
+                                   <button class="current-total bg-dark d-inline-block text-white mr-2 px-2 rounded" onclick="openNav()" id="current-people">CURRENT: 57</button>
+                                   <div class="current-detail d-inline">
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-primary mr-2"></i>23</div>
+                                       <div class="audit d-inline-block  mr-5"><i class="fas fa-circle text-danger mr-2"></i>50</div>
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-warning mr-2"></i>50</div>
+                                       <div class="audit d-inline-block"><i class="fas fa-circle text-info mr-2"></i>50</div>
+                                    </div>
+                               </div>
+                               <!--report-->
+                               <div class="w-100 float-right btn-zoom-group my-4">
+                                   <div class="btn-zoom d-inline-block">
+                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-out"  onclick="zoomin()"><i class="fas fa-plus fa-2x"></i></button>
+                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-in"  onclick="zoomout()"><i class="fas fa-minus fa-2x"></i></button>
+                                    </div>
+                                </div>
+                               <!--Map-->
+                               <div class="map mt-5 pt-5 w-100 text-center" id="map">
+                                    <img src="images/map_office.jpg" alt="map of Cluphouse" id="map-office" class="" title="Click on map to ZoomIn and Use mouse to move">
+                               </div>
+                               <!--End Map-->
+                           <!--End Content tab-->
+                            </div>
+                           <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="overview-tab">Over View Content</div>
+                         </div>
+                        <!-- End show content-->
+                        <!--End content right-->
+                     </div>
+                 </div>
+               </div>
+           </div>
+         </div>
+         <!--End Content right-->
+         <!--box-->
+             <div id="mySidenav" class="sidenav">
+                <div class="sideBarSearch">
+                <i class="fas fa-search fa-2x bg-transparent"></i>
+                <button class="current-total bg-dark d-inline-block text-white mr-2 px-2 rounded" onclick="openNav()" id="current-people">CURRENT: 57</button>
+                 <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav()">&times;</a>
+
+</div>
+
+
+             </div>
+
+         <!--end box-->
+       </div>
+</div>
+
+ <!--End menu left-->
+</div>
+</div>
+<script src="%PUBLIC_URL%/js/jquery-3.3.1.min.js"></script>
+<script src="%PUBLIC_URL%/js/jquery-ui.min.js"></script>
+<script src="%PUBLIC_URL%/js/tether.min.js"></script>
+<script src="%PUBLIC_URL%/js/bootstrap.min.js"></script>
+<script src="%PUBLIC_URL%/js/bootstrap-select.min.js"></script>
+<script src="%PUBLIC_URL%/js/semantic.min.js"></script>
+<script src="%PUBLIC_URL%/js/ListSession.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
