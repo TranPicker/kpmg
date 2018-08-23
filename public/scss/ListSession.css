@@ -107,6 +107,10 @@ html {
           html body .content-right .show-content-right .tab-content .tab-pane .map #map-office {
             min-width: 400px !important;
             z-index: 0 !important; }
+          html body .content-right .show-content-right .tab-content .tab-pane .map .avatar {
+            z-index: 1 !important;
+            position: relative;
+            border: 2px solid red; }
 
 .ui.multiple.dropdown > .label {
   -webkit-border-radius: 20px !important;
@@ -139,10 +143,29 @@ i.icon.delete:before {
     font-size: 40px;
     color: grey;
     transform: translate(16px, -3px); }
-  .sidenav .total-profile .one-profile .list-group .list-group-item img {
+  .sidenav .member-infor-detail {
+    margin-top: 110px; }
+    .sidenav .member-infor-detail .avatar {
+      border: 2px solid red;
+      width: 60px;
+      height: 60px; }
+    .sidenav .member-infor-detail .more-detail .name {
+      font-size: 24px;
+      color: #6a6a6a; }
+    .sidenav .member-infor-detail .more-detail .position {
+      color: #939393;
+      font-size: 13px; }
+    .sidenav .member-infor-detail .more-detail .sub-name {
+      font-size: 12px; }
+  .sidenav .total-profile .one-profile .list-group .list-group-item .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     float: left; }
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=ListSession.css.map */

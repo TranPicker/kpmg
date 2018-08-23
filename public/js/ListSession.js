@@ -8,6 +8,7 @@ $(document).ready(function(){
     })
     // Dragable
     $('#map-office').draggable();
+    $('.avatar-office').draggable();
     // click map office zoomin
     $('#map-office').click(function(){
         if(zoomIn) zoomin();
@@ -23,7 +24,7 @@ $(document).ready(function(){
 });
 function setHeightElement(ele){
     // set height for tab-content
-    var height = $(window).height() - $(ele).offset().top;
+    var height = $(window).height() - $(ele).offset().top -20;
     $(ele).css('height',height);
 }
 function zoomin(){
@@ -48,10 +49,10 @@ function zoomout(){
 }
 
 //side bar
-function openNav() {
-    $('#mySidenav').css('right','0');
+function openNav(ele) {
+    $(ele).css('right','0');
 }
 
-function closeNav() {
-    $('#mySidenav').css('right','-250px');
+function closeNav(ele) {
+    $(ele).css('right','-250px');
 }

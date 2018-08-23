@@ -158,6 +158,11 @@ html {
                 min-width: 400px!important;
                 z-index: 0!important;
               }
+              .avatar{
+                z-index: 1!important;
+                position: relative;
+                border: 2px solid red;
+              }
             }
           }
         }
@@ -207,11 +212,32 @@ i.icon.delete:before{
       transform: translate(16px,-3px);
     }
   }
+  .member-infor-detail{
+    margin-top: 110px;
+    .avatar{
+      border: 2px solid red;
+      width: 60px;
+      height: 60px;
+    }
+    .more-detail{
+      .name{
+        font-size: 24px;
+        color: #6a6a6a;
+      }
+      .position{
+        color: #939393;
+        font-size: 13px;
+      }
+      .sub-name{
+        font-size: 12px;
+      }
+    }
+  }
   .total-profile{
     .one-profile{
       .list-group{
         .list-group-item{
-          img{
+          .avatar{
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -222,4 +248,9 @@ i.icon.delete:before{
     }
   }
 
+}
+.avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
