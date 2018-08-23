@@ -60,6 +60,7 @@
                  </div>
            </nav>
            <!--End Menu-->
+           <!-- Content Right -->
            <div class="content-right content-right col-md-9 ml-sm-auto col-lg-10 px-4">
                <div role="main" ><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                  <div class="d-flex justify-content-between w-100 flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
@@ -138,9 +139,10 @@
            </div>
          </div>
          <!--End Content right-->
- <!--box-->
+
+ <!--box left-->
          <!--List profile-->
-             <div id="list-profile" class="sidenav pl-3">
+             <div id="list-profile" class="sidenav p-3">
                 <div class="sideBarSearch">
                     <i class="fas fa-search fa-2x bg-transparent mx-2"></i>
                     <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav()" id="current-people">CURRENT: 57</button>
@@ -325,7 +327,7 @@
              <!--end List profile-->
 
              <!--box member-detail -->
-        <div id="member-detail" class="sidenav pl-3">
+        <div id="member-detail" class="sidenav p-3">
                 <div class="sideBarSearch d-flex">
                     <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav('#member-detail')">&times;</a>
                 </div>
@@ -338,10 +340,62 @@
                          <span class="sub-name text-muted">mrbean@</span>
                     </div>
                 </div>
-
+                <div class="dob py-3 contact-detail mt-5">
+                    <div class="title">DOB</div>
+                    <div class="dateofbirth">17 August</div>
+                </div>
+                <div class="contact py-3 contact-detail">
+                    <div class="title">Contact</div>
+                    <div class="list-number d-inline-block ">
+                        <div class="number d-block">9876537</div>
+                        <div class="number d-block">61234596</div>
+                    </div>
+                </div>
+                <div class="top-favorite mt-5">
+                    <div class=" mb-3 favarite-title">Top 3 Favorite Zones</div>
+                   <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">GrabGo</div>
+                        <div class="progress-bar mr-2" data-percent="90"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Fun</div>
+                        <div class="progress-bar  mr-2" data-percent="60"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Cafe</div>
+                        <div class="progress-bar  mr-2" data-percent="45"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Cafe</div>
+                        <div class="progress-bar  mr-2" data-percent="80"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                </div>
+                <!-- button Send Email-->
+                <button class="btn btn-email btn-lg w-100 ">Email</button>
+                <div class="more-detail-lg text-uppercase mt-5" data-toggle="modal" data-target="#moreDetailInforMember">More Details <img src="./images/icon/ico_right_slide.png" alt=""></div>
+                <!-- button Send Email-->
         </div>
             <!--box member-detail -->
-         <!--end box-->
+       <!--end box left-->
+       <!-- Modal Box-->
+       <!-- End Modal Box-->
+
+
+
+
+
+
        </div>
 </div>
  <!--End menu left-->

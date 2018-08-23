@@ -20,8 +20,17 @@ $(document).ready(function(){
         setHeightElement('#myTabContent');
         setHeightElement('#map');
     })
-
+    //set width progress bar
+    setWidthProgressBar();
 });
+
+function setWidthProgressBar() {
+   var father = $('.each-favorite').each(function () {
+       var perCent = $(this).children('.progress-bar').data('percent');
+       $(this).children('.progress-bar').css('width',perCent);
+       $(this).children('.number-percent').text(' '+perCent+' %');
+   })
+}
 function setHeightElement(ele){
     // set height for tab-content
     var height = $(window).height() - $(ele).offset().top -20;
