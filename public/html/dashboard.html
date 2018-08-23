@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/semantic.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./scss/daskboard.css">
+    <title>VietJet</title>
+</head>
+<body>
+<div class="container-fluid h-100">
+<div class="row wrapper h-100">
+ <!--menu left-->
+       <div class="container-fluid">
+         <div class="row h-100" >
+                    <!-- Menu-->
+           <nav class="col-md-2 d-md-block sidebar menu-left d-flex align-content-center" id="menuLeft">
+               <div class="brands-kpmg pt-3 d-block m-auto text-uppercase">
+                   <a class="name-brands  text-white mb-1" href="home">
+                   KPMG Clubhouse
+                    </a>
+                    <div class="sologan-brands text-white pt-2">
+                    ppc admin portal
+                    </div>
+                </div>
+                 <div class="sidebar-sticky list-menu">
+                   <ul class="nav flex-column">
+                     <li class="nav-item">
+                       <a class="nav-link active d-flex" href="home">
+                            <i class="fas fa-home mr-3 col-1 pl-0"></i>
+                             Dashboard
+                       </a>
+                     </li>
+                      <li class="nav-item">
+                       <a class="nav-link d-flex" href="staff">
+                            <i class="fas fa-user-tie mr-3 col-1 pl-0"></i>
+                             Staff
+                       </a>
+                     </li>
+                      <li class="nav-item">
+                       <a class="nav-link   d-flex" href="feeds">
+                            <i class="fas fa-file-alt mr-3 col-1 pl-0"></i>
+                             Feeds
+                       </a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link  d-flex" href="#">
+                            <i class="fas fa-cogs mr-3 col-1 pl-0"></i>
+                             Settings
+                       </a>
+                     </li>
+
+                   </ul>
+                 </div>
+           </nav>
+           <!--End Menu-->
+           <!-- Content Right -->
+           <div class="content-right content-right col-md-9 ml-sm-auto col-lg-10 px-4">
+               <div role="main" ><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                 <div class="d-flex justify-content-between w-100 flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                     <div class="main-content w-100">
+                      <!--Acount User-->
+                        <div class="acount-user float-right">
+                         <a class="login" href="#">PPC Admin  <i class="far fa-user ml-1"></i> </a>
+                        </div>
+                          <h1 class="title"> Overview: Day</h1>
+                       <!--End Acount User-->
+                        <!--content right-->
+                        <!--content Top-->
+                        <div class="content-top d-flex align-content-center">
+                            <div class="d-block mr-2 search-btn"><i class="fas fa-search fa-2x bg-transparent" id="icon-search"></i></div>
+                            <div class="ui multiple search selection dropdown" id="multi-select">
+                              <input type="hidden" name="profile">
+                              <div class="default text">Choose Profile...</div>
+                              <div class="menu">
+                                  <div class="item" data-value="audit">Audit</div>
+                                  <div class="item" data-value="tax">Tax</div>
+                                  <div class="item" data-value="advisory">Avisory</div>
+                                  <div class="item" data-value="centralsrv">Central Srv</div>
+                              </div>
+                              </div>
+                         </div>
+                         <!--End content Top-->
+                        <!-- show content-->
+                        <div class="show-content-right mt-5">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                           <li class="nav-item ">
+                             <a class="nav-link active text-uppercase" id="live-tab" data-toggle="tab" href="#live" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-eye mr-2"></i>LIVE</a>
+                           </li>
+                           <li class="nav-item">
+                             <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="profile" aria-selected="false">OVERVIEW</a>
+                           </li>
+                           <a href="#" class="chat"><img src="images/icon/ico_chat.png" alt=""></a>
+
+
+                         </ul>
+                         <div class="tab-content rounded" id="myTabContent">
+                           <div class="tab-pane fade show active h-100" id="live" role="tabpanel" aria-labelledby="live-tab">
+                           <!--Content tab-->
+                               <!--report-->
+                               <div class="current-report pt-2 ml-4  d-inline-block p-3">
+                                   <div class="current-time d-inline mr-3">7:12 PM</div>
+                                   <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav('#list-profile')" id="current-people">CURRENT: 57</button>
+                                   <div class="current-detail d-inline">
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-primary mr-2"></i>23</div>
+                                       <div class="audit d-inline-block  mr-5"><i class="fas fa-circle text-danger mr-2"></i>50</div>
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-warning mr-2"></i>50</div>
+                                       <div class="audit d-inline-block"><i class="fas fa-circle text-info mr-2"></i>50</div>
+                                    </div>
+                               </div>
+                               <!--report-->
+                               <div class="w-100 float-right btn-zoom-group my-4">
+                                   <div class="btn-zoom d-inline-block">
+                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-out"  onclick="zoomin()"><i class="fas fa-plus fa-2x"></i></button>
+                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-in"  onclick="zoomout()"><i class="fas fa-minus fa-2x"></i></button>
+                                    </div>
+                                </div>
+                               <!--Map-->
+                               <div class="map mt-5 pt-5 w-100 text-center" id="map">
+                                    <img src="images/map_office.jpg" alt="map of Cluphouse" id="map-office" class="" title="Click on map to ZoomIn and Use mouse to move">
+                                    <img src="./images/avatar.jpg" class="avatar avatar-office mr-2"  alt="Avatar image" onclick="openNav('#member-detail')">
+                               </div>
+                               <!--End Map-->
+                           <!--End Content tab-->
+                            </div>
+                           <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="overview-tab">dashboard</div>
+                         </div>
+                        <!-- End show content-->
+                        <!--End content right-->
+                     </div>
+                 </div>
+               </div>
+           </div>
+         </div>
+         <!--End Content right-->
+
+ <!--box left-->
+         <!--List profile-->
+             <div id="list-profile" class="sidenav p-3">
+                <div class="sideBarSearch">
+                    <i class="fas fa-search fa-2x bg-transparent mx-2"></i>
+                    <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav()" id="current-people">CURRENT: 57</button>
+                    <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav('#list-profile')">&times;</a>
+                </div>
+                <div class="total-profile mt-4">
+                <!--One Group profile-->
+                    <div class="one-profile mt-4">
+                        <label for="audit" class="text-primary">Audit <span class="members mr-3">(4)</span></label>
+                         <ul class="list-group list-group-flush">
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                          </ul>
+                    </div>
+                <!--One Group profile-->
+<!--One Group profile-->
+                    <div class="one-profile mt-4">
+                        <label for="audit" class="text-danger">Tax <span class="members mr-3">(3)</span></label>
+                         <ul class="list-group list-group-flush">
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                          </ul>
+                    </div>
+                <!--One Group profile-->
+<!--One Group profile-->
+                    <div class="one-profile mt-4">
+                        <label for="audit" class="text-warning">Avisory <span class="members mr-3">(5)</span></label>
+                         <ul class="list-group list-group-flush">
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                          </ul>
+                    </div>
+                <!--One Group profile-->
+<!--One Group profile-->
+                    <div class="one-profile mt-4">
+                        <label for="audit" class="text-info">Central Srv <span class="members mr-3">(4)</span></label>
+                         <ul class="list-group list-group-flush">
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                         <!--One member-->
+                            <li class="list-group-item">
+                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <div class="member-infor">
+                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
+                                <span class="member-objet">Director / 98766541</span>
+                                </div>
+                            </li>
+                         <!--One member-->
+                          </ul>
+                    </div>
+                <!--One Group profile-->
+
+                </div>
+             </div>
+             <!--end List profile-->
+
+             <!--box member-detail -->
+        <div id="member-detail" class="sidenav p-3">
+                <div class="sideBarSearch d-flex">
+                    <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav('#member-detail')">&times;</a>
+                </div>
+                <div class="member-infor-detail d-flex">
+                    <img src="./images/avatar.jpg" alt="Avatar Mr-bean" class="avatar mr-4 border-danger">
+                    <div class="more-detail">
+                         <span class="profile text-danger d-block">Tax</span>
+                         <div class="name d-block">Mr Bean</div>
+                         <span class="position d-block">Director / 65001076</span>
+                         <span class="sub-name text-muted">mrbean@</span>
+                    </div>
+                </div>
+                <div class="dob py-3 contact-detail mt-5">
+                    <div class="title">DOB</div>
+                    <div class="dateofbirth">17 August</div>
+                </div>
+                <div class="contact py-3 contact-detail">
+                    <div class="title">Contact</div>
+                    <div class="list-number d-inline-block ">
+                        <div class="number d-block">9876537</div>
+                        <div class="number d-block">61234596</div>
+                    </div>
+                </div>
+                <div class="top-favorite mt-5">
+                    <div class=" mb-3 favarite-title">Top 3 Favorite Zones</div>
+                   <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">GrabGo</div>
+                        <div class="progress-bar mr-2" data-percent="90"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Fun</div>
+                        <div class="progress-bar  mr-2" data-percent="60"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Cafe</div>
+                        <div class="progress-bar  mr-2" data-percent="45"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                    <!-- each favorite -->
+                    <div class="each-favorite d-flex align-items-center">
+                        <div class="title">Cafe</div>
+                        <div class="progress-bar  mr-2" data-percent="80"></div>
+                        <span class="number-percent text-danger"></span>
+                    </div>
+                    <!-- each favorite -->
+                </div>
+                <!-- button Send Email-->
+                <button class="btn btn-email btn-lg w-100 ">Email</button>
+                <div class="more-detail-lg text-uppercase mt-5" data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail')">More Details <img src="./images/icon/ico_right_slide.png" alt=""></div>
+                <!-- button Send Email-->
+        </div>
+            <!--box member-detail -->
+       <!--end box left-->
+
+       <!-- Modal Box-->
+       <div class="detail-member modal fade" id="moreDetailInforMember" tabindex="-1" role="dialog" aria-labelledby="moreDetailInforMemberTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body h-100">
+               <div class="container-fluid h-100">
+               <div class="row h-100">
+               <div class="col-4 left">
+                 <div class="member-infor-detail d-flex  justify-content-center">
+                        <img src="./images/avatar.jpg" alt="Avatar Mr-bean" class="avatar mr-4 border-danger">
+                        <div class="more-detail">
+                             <span class="profile text-danger d-block">Tax</span>
+                             <div class="name d-block">Mr Bean</div>
+                             <span class="position d-block">Director / 65001076</span>
+                             <span class="sub-name text-muted">mrbean@</span>
+                        </div>
+                    </div>
+                    <div class="dob py-3 contact-detail mt-5">
+                        <div class="title">DOB</div>
+                        <div class="dateofbirth">17 August</div>
+                    </div>
+                    <div class="contact py-3 contact-detail">
+                        <div class="title">Contact</div>
+                        <div class="list-number d-inline-block ">
+                            <div class="number d-block">9876537</div>
+                            <div class="number d-block">61234596</div>
+                        </div>
+                    </div>
+                    <div class="top-favorite mt-5">
+                        <div class=" mb-3 favarite-title">Top 3 Favorite Zones</div>
+                       <!-- each favorite -->
+                        <div class="each-favorite d-flex align-items-center">
+                            <div class="title">GrabGo</div>
+                            <div class="progress-bar mr-2" data-percent="90"></div>
+                            <span class="number-percent text-danger"></span>
+                        </div>
+                        <!-- each favorite -->
+                        <!-- each favorite -->
+                        <div class="each-favorite d-flex align-items-center">
+                            <div class="title">Fun</div>
+                            <div class="progress-bar  mr-2" data-percent="60"></div>
+                            <span class="number-percent text-danger"></span>
+                        </div>
+                        <!-- each favorite -->
+                        <div class="each-favorite d-flex align-items-center">
+                            <div class="title">Cafe</div>
+                            <div class="progress-bar  mr-2" data-percent="45"></div>
+                            <span class="number-percent text-danger"></span>
+                        </div>
+                        <!-- each favorite -->
+                        <!-- each favorite -->
+                        <div class="each-favorite d-flex align-items-center">
+                            <div class="title">Cafe</div>
+                            <div class="progress-bar  mr-2" data-percent="80"></div>
+                            <span class="number-percent text-danger"></span>
+                        </div>
+                         <!-- button Send Email-->
+                        <button class="btn btn-email btn-lg w-100 ">Email</button>
+                </div>
+                  </div>
+                <!--Right modal box detail profile-->
+               <div class="col-8 right">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Day <img src="./images/icon/ico_sort.png" alt=""></th>
+                      <th scope="col">Time In <img src="./images/icon/ico_sort.png" alt=""></th>
+                      <th scope="col">Zones <img src="./images/icon/ico_sort.png" alt=""></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3/24/12</th>
+                      <td>0924 AM</td>
+                      <td>Cafe, Grab & Go</td>
+                    </tr>
+                  </tbody>
+                </table>
+               </div>
+               <!--End right modal box detail profile-->
+            </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <!-- End Modal Box-->
+   </div>
+</div>
+ <!--End menu left-->
+</div>
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/tether.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-select.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+<script src="./js/dasboard.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

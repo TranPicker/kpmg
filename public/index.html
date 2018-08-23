@@ -7,7 +7,7 @@
        <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/semantic.min.css">
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.min.js">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/reset.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/scss/ListSession.css">
@@ -32,7 +32,7 @@
                  <div class="sidebar-sticky list-menu">
                    <ul class="nav flex-column">
                      <li class="nav-item">
-                       <a class="nav-link active d-flex" href="home">
+                       <a class="nav-link active d-flex" href="dashboard.html">
                             <i class="fas fa-home mr-3 col-1 pl-0"></i>
                              Dashboard
                        </a>
@@ -72,65 +72,33 @@
                           <h1 class="title"> Overview: Day</h1>
                        <!--End Acount User-->
                         <!--content right-->
-                        <!--content Top-->
-                        <div class="content-top d-flex align-content-center">
-                            <div class="d-block mr-2 search-btn"><i class="fas fa-search fa-2x bg-transparent" id="icon-search"></i></div>
-                            <div class="ui multiple search selection dropdown" id="multi-select">
-                              <input type="hidden" name="profile">
-                              <div class="default text">Choose Profile...</div>
-                              <div class="menu">
-                                  <div class="item" data-value="audit">Audit</div>
-                                  <div class="item" data-value="tax">Tax</div>
-                                  <div class="item" data-value="advisory">Avisory</div>
-                                  <div class="item" data-value="centralsrv">Central Srv</div>
-                              </div>
-                              </div>
-                         </div>
-                         <!--End content Top-->
                         <!-- show content-->
                         <div class="show-content-right mt-5">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                           <li class="nav-item ">
-                             <a class="nav-link active text-uppercase" id="live-tab" data-toggle="tab" href="#live" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-eye mr-2"></i>LIVE</a>
-                           </li>
-                           <li class="nav-item">
-                             <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="profile" aria-selected="false">OVERVIEW</a>
-                           </li>
-                           <a href="#" class="chat"><img src="images/icon/ico_chat.png" alt=""></a>
+                         <ul class="nav nav-tabs" id="myTab" role="tablist">
+                             <li class="nav-item ">
+                               <a class="nav-link active text-uppercase" id="live-tab" data-toggle="tab" href="#live" role="tab" aria-controls="home" aria-selected="true">user settings</a>
+                             </li>
+                             <li class="nav-item">
+                               <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="profile" aria-selected="false">zone settings</a>
+                             </li>
+                            <li class="nav-item">
+                               <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#zone" role="tab" aria-controls="profile" aria-selected="false">zone</a>
+                             </li>
+                             <a href="#" class="chat"><img src="images/icon/ico_chat.png" alt=""></a>
+                           </ul>
+                           <div class="tab-content rounded" id="myTabContent">
 
+                            <div class="tab-pane fade show active h-100 m-auto" id="live" role="tabpanel" aria-labelledby="live-tab">
+                            <button class="btn btn-danger w-75">User Setting</button>
+                           </div>
+                             <div class="tab-pane fade m-auto" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                             <button class="btn btn-danger w-75">Zone Setting</button>
+                             </div>
+                            <div class="tab-pane fade m-auto" id="zone" role="tabpanel" aria-labelledby="overview-tab">
+                                 <button class="btn btn-danger w-75 ">Zone</button>
+                             </div>
 
-                         </ul>
-                         <div class="tab-content rounded" id="myTabContent">
-                           <div class="tab-pane fade show active h-100" id="live" role="tabpanel" aria-labelledby="live-tab">
-                           <!--Content tab-->
-                               <!--report-->
-                               <div class="current-report pt-2 ml-4  d-inline-block p-3">
-                                   <div class="current-time d-inline mr-3">7:12 PM</div>
-                                   <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav('#list-profile')" id="current-people">CURRENT: 57</button>
-                                   <div class="current-detail d-inline">
-                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-primary mr-2"></i>23</div>
-                                       <div class="audit d-inline-block  mr-5"><i class="fas fa-circle text-danger mr-2"></i>50</div>
-                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-warning mr-2"></i>50</div>
-                                       <div class="audit d-inline-block"><i class="fas fa-circle text-info mr-2"></i>50</div>
-                                    </div>
-                               </div>
-                               <!--report-->
-                               <div class="w-100 float-right btn-zoom-group my-4">
-                                   <div class="btn-zoom d-inline-block">
-                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-out"  onclick="zoomin()"><i class="fas fa-plus fa-2x"></i></button>
-                                       <button class="zoom-out bg-light d-inline-block p-2" id="zoom-in"  onclick="zoomout()"><i class="fas fa-minus fa-2x"></i></button>
-                                    </div>
-                                </div>
-                               <!--Map-->
-                               <div class="map mt-5 pt-5 w-100 text-center" id="map">
-                                    <img src="images/map_office.jpg" alt="map of Cluphouse" id="map-office" class="" title="Click on map to ZoomIn and Use mouse to move">
-                                    <img src="./images/avatar.jpg" class="avatar avatar-office mr-2"  alt="Avatar image" onclick="openNav('#member-detail')">
-                               </div>
-                               <!--End Map-->
-                           <!--End Content tab-->
-                            </div>
-                           <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="overview-tab">Over View Content</div>
-                         </div>
+                             </div>
                         <!-- End show content-->
                         <!--End content right-->
                      </div>
@@ -138,266 +106,8 @@
                </div>
            </div>
          </div>
-         <!--End Content right-->
-
- <!--box left-->
-         <!--List profile-->
-             <div id="list-profile" class="sidenav p-3">
-                <div class="sideBarSearch">
-                    <i class="fas fa-search fa-2x bg-transparent mx-2"></i>
-                    <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav()" id="current-people">CURRENT: 57</button>
-                    <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav('#list-profile')">&times;</a>
-                </div>
-                <div class="total-profile mt-4">
-                <!--One Group profile-->
-                    <div class="one-profile mt-4">
-                        <label for="audit" class="text-primary">Audit <span class="members mr-3">(4)</span></label>
-                         <ul class="list-group list-group-flush">
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                          </ul>
-                    </div>
-                <!--One Group profile-->
-<!--One Group profile-->
-                    <div class="one-profile mt-4">
-                        <label for="audit" class="text-danger">Tax <span class="members mr-3">(3)</span></label>
-                         <ul class="list-group list-group-flush">
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                          </ul>
-                    </div>
-                <!--One Group profile-->
-<!--One Group profile-->
-                    <div class="one-profile mt-4">
-                        <label for="audit" class="text-warning">Avisory <span class="members mr-3">(5)</span></label>
-                         <ul class="list-group list-group-flush">
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                          </ul>
-                    </div>
-                <!--One Group profile-->
-<!--One Group profile-->
-                    <div class="one-profile mt-4">
-                        <label for="audit" class="text-info">Central Srv <span class="members mr-3">(4)</span></label>
-                         <ul class="list-group list-group-flush">
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                         <!--One member-->
-                            <li class="list-group-item">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
-                                <div class="member-infor">
-                                <a href="#" class="member-position d-block text-dark">Merry Lim</a>
-                                <span class="member-objet">Director / 98766541</span>
-                                </div>
-                            </li>
-                         <!--One member-->
-                          </ul>
-                    </div>
-                <!--One Group profile-->
-
-                </div>
-             </div>
-             <!--end List profile-->
-
-             <!--box member-detail -->
-        <div id="member-detail" class="sidenav p-3">
-                <div class="sideBarSearch d-flex">
-                    <a href="javascript:void(0)" class="closebtn d-inline-block" onclick="closeNav('#member-detail')">&times;</a>
-                </div>
-                <div class="member-infor-detail d-flex">
-                    <img src="./images/avatar.jpg" alt="Avatar Mr-bean" class="avatar mr-4 border-danger">
-                    <div class="more-detail">
-                         <span class="profile text-danger d-block">Tax</span>
-                         <div class="name d-block">Mr Bean</div>
-                         <span class="position d-block">Director / 65001076</span>
-                         <span class="sub-name text-muted">mrbean@</span>
-                    </div>
-                </div>
-                <div class="dob py-3 contact-detail mt-5">
-                    <div class="title">DOB</div>
-                    <div class="dateofbirth">17 August</div>
-                </div>
-                <div class="contact py-3 contact-detail">
-                    <div class="title">Contact</div>
-                    <div class="list-number d-inline-block ">
-                        <div class="number d-block">9876537</div>
-                        <div class="number d-block">61234596</div>
-                    </div>
-                </div>
-                <div class="top-favorite mt-5">
-                    <div class=" mb-3 favarite-title">Top 3 Favorite Zones</div>
-                   <!-- each favorite -->
-                    <div class="each-favorite d-flex align-items-center">
-                        <div class="title">GrabGo</div>
-                        <div class="progress-bar mr-2" data-percent="90"></div>
-                        <span class="number-percent text-danger"></span>
-                    </div>
-                    <!-- each favorite -->
-                    <!-- each favorite -->
-                    <div class="each-favorite d-flex align-items-center">
-                        <div class="title">Fun</div>
-                        <div class="progress-bar  mr-2" data-percent="60"></div>
-                        <span class="number-percent text-danger"></span>
-                    </div>
-                    <!-- each favorite -->
-                    <div class="each-favorite d-flex align-items-center">
-                        <div class="title">Cafe</div>
-                        <div class="progress-bar  mr-2" data-percent="45"></div>
-                        <span class="number-percent text-danger"></span>
-                    </div>
-                    <!-- each favorite -->
-                    <!-- each favorite -->
-                    <div class="each-favorite d-flex align-items-center">
-                        <div class="title">Cafe</div>
-                        <div class="progress-bar  mr-2" data-percent="80"></div>
-                        <span class="number-percent text-danger"></span>
-                    </div>
-                    <!-- each favorite -->
-                </div>
-                <!-- button Send Email-->
-                <button class="btn btn-email btn-lg w-100 ">Email</button>
-                <div class="more-detail-lg text-uppercase mt-5" data-toggle="modal" data-target="#moreDetailInforMember">More Details <img src="./images/icon/ico_right_slide.png" alt=""></div>
-                <!-- button Send Email-->
+         <!--End Content right--
         </div>
-            <!--box member-detail -->
-       <!--end box left-->
-       <!-- Modal Box-->
-       <!-- End Modal Box-->
-
-
-
-
-
-
-       </div>
-</div>
  <!--End menu left-->
 </div>
 </div>
