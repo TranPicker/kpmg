@@ -2,10 +2,24 @@
   margin: 0px;
   padding: 0px;
 }
+@font-face {
+  font-family: 'KPMG';
+  src: url('./../fonts/KPMG-Light.eot');
+  //src: url('./../fonts/KPMG-Light.eot?#iefix') format('embedded-opentype'),
+  //url('./../fonts/KPMG-Light.woff2') format('woff2'),
+  //url('./../fonts/KPMG-Light.woff') format('woff'),
+  //url('./../fonts/KPMG-Light.ttf') format('truetype'),
+  //url('./../fonts/KPMG-Light.svg#KPMG-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 html {
   height: 100%;
   body {
+    font-family: KPMG;
+    font-weight: 300;
     height: 100%;
     background: #f1f1f1;
     #menuLeft {
@@ -70,6 +84,8 @@ html {
         font-size: 40px;
       }
       .content-top{
+        z-index: 10001;
+        position: relative;
         .search-btn{
           i{
             color:#656565;
@@ -167,10 +183,6 @@ i.icon.delete:before{
 }
 
 //side bar
-body {
-  font-family: "Lato", sans-serif;
-}
-
 
 .sidenav {
   height: 100%;
@@ -187,10 +199,26 @@ body {
   .sideBarSearch{
     .fas{
       font-size: 21px;
+      cursor: pointer;
     }
     .closebtn{
       font-size: 40px;
-      transform: translateX(40px);
+      color: grey;
+      transform: translate(16px,-3px);
+    }
+  }
+  .total-profile{
+    .one-profile{
+      .list-group{
+        .list-group-item{
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            float: left;
+          }
+        }
+      }
     }
   }
 

@@ -2,9 +2,16 @@
   margin: 0px;
   padding: 0px; }
 
+@font-face {
+  font-family: 'KPMG';
+  src: url("./../fonts/KPMG-Light.eot");
+  font-weight: 300;
+  font-style: normal; }
 html {
   height: 100%; }
   html body {
+    font-family: KPMG;
+    font-weight: 300;
     height: 100%;
     background: #f1f1f1; }
     html body #menuLeft {
@@ -48,15 +55,18 @@ html {
     html body .content-right .title {
       color: #505050;
       font-size: 40px; }
-    html body .content-right .content-top .search-btn i {
-      color: #656565;
-      cursor: pointer;
-      transform: translateY(8px); }
-    html body .content-right .content-top #multi-select {
-      border: none;
-      background-color: transparent; }
-      html body .content-right .content-top #multi-select .menu .item {
-        font-size: 16px; }
+    html body .content-right .content-top {
+      z-index: 10001;
+      position: relative; }
+      html body .content-right .content-top .search-btn i {
+        color: #656565;
+        cursor: pointer;
+        transform: translateY(8px); }
+      html body .content-right .content-top #multi-select {
+        border: none;
+        background-color: transparent; }
+        html body .content-right .content-top #multi-select .menu .item {
+          font-size: 16px; }
     html body .content-right .show-content-right .nav-tabs {
       position: relative; }
       html body .content-right .show-content-right .nav-tabs .nav-item {
@@ -110,9 +120,6 @@ html {
 i.icon.delete:before {
   content: url("./../images/icon/close.png") !important; }
 
-body {
-  font-family: "Lato", sans-serif; }
-
 .sidenav {
   height: 100%;
   width: 250px;
@@ -126,9 +133,16 @@ body {
   z-index: 10001;
   box-shadow: inset 5px 0 0 0 grey; }
   .sidenav .sideBarSearch .fas {
-    font-size: 21px; }
+    font-size: 21px;
+    cursor: pointer; }
   .sidenav .sideBarSearch .closebtn {
     font-size: 40px;
-    transform: translateX(40px); }
+    color: grey;
+    transform: translate(16px, -3px); }
+  .sidenav .total-profile .one-profile .list-group .list-group-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left; }
 
 /*# sourceMappingURL=ListSession.css.map */
