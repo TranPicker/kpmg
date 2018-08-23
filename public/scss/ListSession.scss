@@ -113,28 +113,34 @@ html {
         .tab-content{
           background: #ffffff;
           .tab-pane{
-            overflow-x: hidden;
+            overflow: hidden;
+            .current-report{
+              position: relative;
+              border-radius: 30px!important;
+              z-index: 10000!important;
+              background: #ffffff;
+            }
             .btn-zoom-group{
               position: relative;
               //height: 92px;
-              z-index: 1000;
+              z-index: 999;
               .btn-zoom{
-                width: 50px!important;
-                position: absolute;
-                right: 20px;
-                top: 0;
-              }
+                 width: 50px!important;
+                 position: absolute;
+                 right: 20px;
+                 top: 0;
+               }
             }
             .map{
               height: 500px;
-              overflow: scroll;
+              z-index: 0;
               &::-webkit-scrollbar {
                 display: none;
               }
 
               #map-office{
                 min-width: 400px!important;
-                //max-width: 100%;
+                z-index: 0!important;
               }
             }
           }
@@ -165,39 +171,27 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 250px;
   position: fixed;
-  z-index: 1;
   top: 0;
-  right: 0;
+  right: -250px;
   background-color: #ffffff;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top:25px;
   z-index: 10001;
   box-shadow: inset 5px 0 0 0 grey;
+  .sideBarSearch{
+    .fas{
+      font-size: 21px;
+    }
+    .closebtn{
+      font-size: 40px;
+      transform: translateX(40px);
+    }
+  }
 
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }

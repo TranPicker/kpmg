@@ -1,4 +1,6 @@
+var zoomIn = true;
 $(document).ready(function(){
+
     $('#multi-select').dropdown();
     //click icon search
     $('#icon-search').click(function(){
@@ -8,7 +10,8 @@ $(document).ready(function(){
     $('#map-office').draggable();
     // click map office zoomin
     $('#map-office').click(function(){
-        zoomin();
+        if(zoomIn) zoomin();
+        else zoomout();
     })
     setHeightElement('#myTabContent');
     setHeightElement('#map');
@@ -24,6 +27,7 @@ function setHeightElement(ele){
     $(ele).css('height',height);
 }
 function zoomin(){
+    zoomIn = true;
     var myImg = $("#map-office");
     var currWidth = myImg.width()
     console.log(currWidth)
@@ -33,6 +37,7 @@ function zoomin(){
     }
 }
 function zoomout(){
+    zoomIn = false;
     var myImg = $("#map-office");
     console.log(myImg)
     var currWidth = myImg.width()
@@ -42,16 +47,11 @@ function zoomout(){
         myImg.css("width", (currWidth - 100));}
 }
 
-$( "#current-people" ).toggle(function() {
-    openNav();
-}, function() {
-    closeNav();
-});
 //side bar
 function openNav() {
-    $('#mySidenav').css('width','250px');
+    $('#mySidenav').css('right','0');
 }
 
 function closeNav() {
-    $('#mySidenav').css('width','0');
+    $('#mySidenav').css('right','-250px');
 }
