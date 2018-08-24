@@ -22,7 +22,7 @@
                     <!-- Menu-->
            <nav class="col-md-2 d-md-block sidebar menu-left d-flex align-content-center" id="menuLeft">
                <div class="brands-kpmg pt-3 d-block m-auto text-uppercase">
-                   <a class="name-brands  text-white mb-1" href="home">
+                   <a class="name-brands  text-white mb-1" href="dashboard.html">
                    KPMG Clubhouse
                     </a>
                     <div class="sologan-brands text-white pt-2">
@@ -31,26 +31,26 @@
                 </div>
                  <div class="sidebar-sticky list-menu">
                    <ul class="nav flex-column">
-                     <li class="nav-item">
-                       <a class="nav-link active d-flex" href="home">
+                     <li class="nav-item active">
+                       <a class="nav-link active d-flex" href="dashboard.html">
                             <i class="fas fa-home mr-3 col-1 pl-0"></i>
                              Dashboard
                        </a>
                      </li>
                       <li class="nav-item">
-                       <a class="nav-link d-flex" href="staff">
+                       <a class="nav-link d-flex" href="staff.html">
                             <i class="fas fa-user-tie mr-3 col-1 pl-0"></i>
                              Staff
                        </a>
                      </li>
                       <li class="nav-item">
-                       <a class="nav-link   d-flex" href="feeds">
+                       <a class="nav-link   d-flex" href="feeds.html">
                             <i class="fas fa-file-alt mr-3 col-1 pl-0"></i>
                              Feeds
                        </a>
                      </li>
                      <li class="nav-item">
-                       <a class="nav-link  d-flex" href="#">
+                       <a class="nav-link  d-flex" href="setting.html">
                             <i class="fas fa-cogs mr-3 col-1 pl-0"></i>
                              Settings
                        </a>
@@ -79,10 +79,10 @@
                               <input type="hidden" name="profile">
                               <div class="default text">Choose Profile...</div>
                               <div class="menu">
-                                  <div class="item" data-value="audit">Audit</div>
-                                  <div class="item" data-value="tax">Tax</div>
-                                  <div class="item" data-value="advisory">Avisory</div>
-                                  <div class="item" data-value="centralsrv">Central Srv</div>
+                                  <div class="item" data-value="audit" data-profile="audit">Audit</div>
+                                  <div class="item" data-value="tax" data-profile="tax">Tax</div>
+                                  <div class="item" data-value="advisory" data-profile="advisory">Advisory</div>
+                                  <div class="item" data-value="centralsrv" data-profile="centralsrv">Central Srv</div>
                               </div>
                               </div>
                          </div>
@@ -106,7 +106,7 @@
                                <!--report-->
                                <div class="current-report pt-2 ml-4  d-inline-block p-3">
                                    <div class="current-time d-inline mr-3">7:12 PM</div>
-                                   <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav('#list-profile')" id="current-people">CURRENT: 57</button>
+                                   <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav('#list-profile'),closeNav('#member-detail')" id="current-people">CURRENT: 57</button>
                                    <div class="current-detail d-inline">
                                        <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-primary mr-2"></i>23</div>
                                        <div class="audit d-inline-block  mr-5"><i class="fas fa-circle text-danger mr-2"></i>50</div>
@@ -124,7 +124,7 @@
                                <!--Map-->
                                <div class="map mt-5 pt-5 w-100 text-center" id="map">
                                     <img src="images/map_office.jpg" alt="map of Cluphouse" id="map-office" class="" title="Click on map to ZoomIn and Use mouse to move">
-                                    <img src="./images/avatar.jpg" class="avatar avatar-office mr-2"  alt="Avatar image" onclick="openNav('#member-detail')">
+                                    <img src="./images/avatar.jpg" class="avatar avatar-office mr-2"  alt="Avatar image" onclick="openNav('#member-detail'),closeNav('#list-profile')">
                                </div>
                                <!--End Map-->
                            <!--End Content tab-->
@@ -154,7 +154,7 @@
                         <label for="audit" class="text-primary">Audit <span class="members mr-3">(4)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -163,7 +163,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -172,7 +172,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -181,7 +181,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -197,7 +197,7 @@
                         <label for="audit" class="text-danger">Tax <span class="members mr-3">(3)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -206,7 +206,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -215,7 +215,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -231,7 +231,7 @@
                         <label for="audit" class="text-warning">Avisory <span class="members mr-3">(5)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -240,7 +240,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -249,7 +249,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -258,7 +258,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -267,7 +267,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -283,7 +283,7 @@
                         <label for="audit" class="text-info">Central Srv <span class="members mr-3">(4)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -292,7 +292,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -301,7 +301,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
@@ -310,7 +310,7 @@
                             </li>
                          <!--One member-->
                          <!--One member-->
-                            <li class="list-group-item">
+                            <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
                                 <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>

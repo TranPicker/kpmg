@@ -61,7 +61,7 @@ html {
             a{
               color: white!important;
             }
-            &:hover {
+            &:hover,&.active{
               background: #ffffff;
               border-radius: 5px;
               a {
@@ -71,6 +71,7 @@ html {
                 color: #b2b2b2;
               }
             }
+
           }
         }
       }
@@ -183,7 +184,7 @@ html {
   border-radius: 20px!important;
   font-size: 20px;
   color:white;
-  background: #c7007d;
+  //background: #c7007d;
   margin-right: 18px;
 }
 i.icon.delete:before{

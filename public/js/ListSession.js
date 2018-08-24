@@ -15,13 +15,14 @@ $(document).ready(function(){
         else zoomout();
     })
     setHeightElement('#myTabContent');
-    setHeightElement('#map');
+    // setHeightElement('#map');
     $(window).resize(function() {
         setHeightElement('#myTabContent');
         setHeightElement('#map');
     })
     //set width progress bar
     setWidthProgressBar();
+
 });
 
 function setWidthProgressBar() {

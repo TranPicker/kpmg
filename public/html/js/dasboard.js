@@ -1,4 +1,8 @@
 var zoomIn = true;
+var auditColor = '#0191d8';
+var taxColor = '#bc1f4a';
+var advisoryColor = '#eaaa00';
+var centralsrvColor = '#c3007b';
 $(document).ready(function(){
 
     $('#multi-select').dropdown();
@@ -22,8 +26,48 @@ $(document).ready(function(){
     })
     //set width progress bar
     setWidthProgressBar();
+    //set Background profile
+    $('.content-top .menu .item').click(function () {
+        setBackgroundProfile();
+    })
 });
-
+function setBackgroundProfile(){
+    console.log(1)
+    var color= auditColor;
+    var t;
+    $('.content-top .menu .item').each(function () {
+        var type = $(this).data('profile');
+       switch (type){
+           case 'audit':
+               color = auditColor;
+               t=type;
+               break;
+           case 'tax':
+               color = taxColor;
+               t=type;
+               break;
+           case 'advisory':
+               color = advisoryColor;
+               t=type;
+               break;
+           case 'centralsrv':
+               color = centralsrvColor;
+               t=type;
+               break;
+           default:
+               color = auditColor;
+               t=type;
+       }
+    })
+    console.log(t);
+    $('.label').each(function () {
+        var dataValue = $(this).data('value');
+        console.log(dataValue);
+        if(dataValue === type){
+            $(this).css('background',color);
+        }
+    })
+}
 function setWidthProgressBar() {
    var father = $('.each-favorite').each(function () {
        var perCent = $(this).children('.progress-bar').data('percent');
@@ -49,7 +93,6 @@ function zoomin(){
 function zoomout(){
     zoomIn = false;
     var myImg = $("#map-office");
-    console.log(myImg)
     var currWidth = myImg.width()
     console.log(currWidth)
     if(currWidth == 100) return false;
