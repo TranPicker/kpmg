@@ -395,7 +395,7 @@
                     <div class="title-name">F.R.E.D Meassage</div>
                 </div>
                 <div class="area-chat">
-                   <div class="rules"><i class="fas fa-file-alt mr-1"></i> Rules</div>
+                   <div class="rules" data-toggle="modal" data-target="#rules" onclick="closeChatBox('#chat-box')"><i class="fas fa-file-alt mr-1"></i> Rules</div>
                        <div class="example-chat d-flex align-items-center">
                            <img src="images/KPMG.png" class="float-left  mr-3" alt="">
                            <div class="text">
@@ -413,8 +413,9 @@
        <!--end box left-->
 
        <!-- Modal Box-->
-       <div class="detail-member modal fade" id="moreDetailInforMember" tabindex="-1" role="dialog" aria-labelledby="moreDetailInforMemberTitle" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered" role="document">
+       <!--More Detail Profile modal box-->
+   <div class="detail-member modal fade" id="moreDetailInforMember" tabindex="-1" role="dialog" aria-labelledby="moreDetailInforMemberTitle" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
              <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -627,8 +628,155 @@
            </div>
          </div>
        </div>
-       <!-- End Modal Box-->
    </div>
+   <!--More Detail Profile modal box-->
+   <!--Rules-->
+   <div class="detail-member modal fade rules-box" id="rules" tabindex="-1" role="dialog" aria-labelledby="rulesTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+               <div class="modal-body h-100">
+                    <div class="title ml-5 mb-5">F.R.E.D Rules</div>
+                    <div class="list-rule">
+                    <table class="table table-striped">
+                       <thead>
+                         <tr>
+                           <th scope="col"></th>
+                           <th scope="col">Mai Condition <img src="./images/icon/ico_sort.png" alt=""></th>
+                           <th scope="col">Description <img src="./images/icon/ico_sort.png" alt=""></th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <th scope="row">1</th>
+                           <td>1 visit_clubhouse</td>
+                           <td>Hellop Tran! Welcome to KPMG Clubhouse!</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">2</th>
+                           <td>Birthday</td>
+                           <td>Happy Birthday Tram! Slice of Cafe on the house:)</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                      <tr>
+                           <th scope="row">3</th>
+                           <td>> 10 visit_clubhouse</td>
+                           <td>Hi Tran! Great to see uou again. Have a great day ahead :D</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                   <div class="btn-create-rule btn-danger btn px-5 py-2 text-uppercase" data-toggle="modal" data-target="#create-rule"> create new rule</div>
+              </div>
+            </div>
+          </div>
+      </div>
+   <!--End Modal box Rules-->
+   <!--Create Rule modal-->
+    <div class="detail-member modal fade rules-box" id="create-rule" tabindex="-1" role="dialog" aria-labelledby="rulesTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-create-rule">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+           <div class="modal-body h-100">
+                <div class="title ml-5 mb-5 text-capitalize"><img src="images/icon/ico_left_slide.png" class="mr-3 back" alt="" onclick="closeFormCreate()">Rule Informations</div>
+                <div class="form-create">
+                    <div class="form-group d-flex">
+                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="selectConditior">
+                            <option selected>select Main Condition</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Another World</option>
+                         </select>
+                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="selectPrequislte">
+                            <option selected>Select Prerequislte</option>
+                            <option value="1">Essential</option>
+                            <option value="2">Requirement</option>
+                            <option value="3">Necessity</option>
+                         </select>
+                         <input type="text" name="txtCondition" placeholder="Enter Additional Condition">
+                    </div>
+                    <label for="content">Content <span class="text-primary">(see more variables)</span></label>
+                    <textarea class="form-control"></textarea>
+               </div>
+               <div class="btn-add btn-danger btn px-5 py-2 text-uppercase">Add</div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!--End Create Rule modal-->
+   <!-- End Modal Box-->
 </div>
  <!--End menu left-->
 </div>

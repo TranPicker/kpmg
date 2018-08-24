@@ -50,7 +50,6 @@ $(document).ready(function () {
 function setColorProfile(obj,css) {
     $(obj).each(function () {
         var type = $(this).data('profile');
-        console.log(type)
         switch (type) {
             case 'audit': {
                 $(this).css(css, auditColor);
@@ -127,7 +126,6 @@ function zoomout() {
     zoomIn = false;
     var myImg = $("#map-office");
     var currWidth = myImg.width()
-    console.log(currWidth)
     if (currWidth == 100) return false;
     else {
         myImg.css("width", (currWidth - 100));
@@ -146,4 +144,9 @@ function openChatBox(ele){
 }
 function closeChatBox(ele) {
     $(ele).css('right', '-350px');
+}
+
+//close form create
+function closeFormCreate(){
+    $('#close-create-rule').click();
 }
