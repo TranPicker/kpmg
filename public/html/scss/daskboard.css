@@ -10,6 +10,18 @@
 a {
   color: #90959a; }
 
+.bg-audit {
+  background: #0191d8 !important; }
+
+.bg-tax {
+  background: #bc1f4a !important; }
+
+.bg-advisory {
+  background: #eaaa00 !important; }
+
+.bg-centralsrv {
+  background: #c3007b !important; }
+
 html {
   height: 100%; }
   html body {
@@ -199,10 +211,14 @@ i.icon.delete:before {
     cursor: pointer; }
     .sidenav .more-detail-lg img {
       cursor: pointer; }
+  .sidenav .total-profile .one-profile .title-profile {
+    font-size: 18px;
+    font-weight: bold; }
   .sidenav .total-profile .one-profile .list-group .list-group-item .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 2px solid transparent;
     float: left; }
 
 .detail-member .modal-dialog {

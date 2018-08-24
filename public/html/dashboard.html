@@ -108,10 +108,10 @@
                                    <div class="current-time d-inline mr-3">7:12 PM</div>
                                    <button class="current-total bg-dark d-inline-block text-white mr-2 px-3 rounded" onclick="openNav('#list-profile'),closeNav('#member-detail')" id="current-people">CURRENT: 57</button>
                                    <div class="current-detail d-inline">
-                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-primary mr-2"></i>23</div>
-                                       <div class="audit d-inline-block  mr-5"><i class="fas fa-circle text-danger mr-2"></i>50</div>
-                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle text-warning mr-2"></i>50</div>
-                                       <div class="audit d-inline-block"><i class="fas fa-circle text-info mr-2"></i>50</div>
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle ico-profile mr-2" data-profile="audit"></i>23</div>
+                                       <div class="audit d-inline-block  mr-5"><i class="fas fa-circle  ico-profile mr-2" data-profile="tax"></i>50</div>
+                                       <div class="audit d-inline-block mr-5"><i class="fas fa-circle  ico-profile mr-2" data-profile="advisory"></i>50</div>
+                                       <div class="audit d-inline-block"><i class="fas fa-circle  ico-profile mr-2" data-profile="centralsrv"></i>50</div>
                                     </div>
                                </div>
                                <!--report-->
@@ -151,11 +151,11 @@
                 <div class="total-profile mt-4">
                 <!--One Group profile-->
                     <div class="one-profile mt-4">
-                        <label for="audit" class="text-primary">Audit <span class="members mr-3">(4)</span></label>
+                        <label for="audit" class="title-profile" data-profile="audit">Audit<span class="members mr-3">(4)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="audit">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -164,7 +164,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="audit">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -173,7 +173,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="audit">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -182,7 +182,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="audit">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -194,11 +194,11 @@
                 <!--One Group profile-->
 <!--One Group profile-->
                     <div class="one-profile mt-4">
-                        <label for="audit" class="text-danger">Tax <span class="members mr-3">(3)</span></label>
+                        <label for="audit" class="title-profile" data-profile="tax">Tax <span class="members mr-3">(3)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="tax">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -207,7 +207,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="tax">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -216,7 +216,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image"  data-profile ="tax">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -228,11 +228,11 @@
                 <!--One Group profile-->
 <!--One Group profile-->
                     <div class="one-profile mt-4">
-                        <label for="audit" class="text-warning">Avisory <span class="members mr-3">(5)</span></label>
+                        <label for="audit" class="title-profile" data-profile="advisory">Advisory <span class="members mr-3">(5)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image"  data-profile ="advisory">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -241,7 +241,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="advisory">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -250,7 +250,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="advisory">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -259,7 +259,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="advisory">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -268,7 +268,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="advisory">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -280,11 +280,11 @@
                 <!--One Group profile-->
 <!--One Group profile-->
                     <div class="one-profile mt-4">
-                        <label for="audit" class="text-info">Central Srv <span class="members mr-3">(4)</span></label>
+                        <label for="audit" class="title-profile" data-profile="centralsrv">Central Srv <span class="members mr-3">(4)</span></label>
                          <ul class="list-group list-group-flush">
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="centralsrv">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -293,7 +293,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="centralsrv">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -302,7 +302,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="centralsrv">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -311,7 +311,7 @@
                          <!--One member-->
                          <!--One member-->
                             <li class="list-group-item"  data-toggle="modal" data-target="#moreDetailInforMember" onclick="closeNav('#member-detail'),closeNav('#list-profile')">
-                                <img src="./images/avatar.jpg" class="avatar mr-2" alt="Avatar image">
+                                <img src="./images/avatar.jpg" class="avatar mr-2 border-profile" alt="Avatar image" data-profile ="centralsrv">
                                 <div class="member-infor">
                                 <a href="#" class="member-position d-block text-dark">Merry Lim</a>
                                 <span class="member-objet">Director / 98766541</span>
@@ -334,7 +334,7 @@
                 <div class="member-infor-detail d-flex">
                     <img src="./images/avatar.jpg" alt="Avatar Mr-bean" class="avatar mr-4 border-danger">
                     <div class="more-detail">
-                         <span class="profile text-danger d-block">Tax</span>
+                         <span class="profile title-profile d-block" data-profile="tax">Tax</span>
                          <div class="name d-block">Mr Bean</div>
                          <span class="position d-block">Director / 65001076</span>
                          <span class="sub-name text-muted">mrbean@</span>
@@ -405,7 +405,7 @@
                  <div class="member-infor-detail d-flex  justify-content-center">
                         <img src="./images/avatar.jpg" alt="Avatar Mr-bean" class="avatar mr-4 border-danger">
                         <div class="more-detail">
-                             <span class="profile text-danger d-block">Tax</span>
+                             <span class="profile title-profile d-block" data-profile="tax">Tax</span>
                              <div class="name d-block">Mr Bean</div>
                              <span class="position d-block">Director / 65001076</span>
                              <span class="sub-name text-muted">mrbean@</span>

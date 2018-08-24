@@ -2,6 +2,10 @@
   margin: 0px;
   padding: 0px;
 }
+$auditColor : #0191d8;
+$taxColor : #bc1f4a;
+$advisoryColor : #eaaa00;
+$centralsrvColor : #c3007b;
 @font-face {
   font-family: 'KPMG';
   src: url('./../fonts/KPMG-Light.eot');
@@ -16,6 +20,18 @@
 
 a{
   color: #90959a;
+}
+.bg-audit{
+  background: $auditColor!important;
+}
+.bg-tax{
+  background: $taxColor!important;;
+}
+.bg-advisory{
+  background: $advisoryColor!important;;
+}
+.bg-centralsrv{
+  background: $centralsrvColor!important;;
 }
 html {
   height: 100%;
@@ -295,12 +311,17 @@ i.icon.delete:before{
   }
   .total-profile{
     .one-profile{
+      .title-profile{
+        font-size: 18px;
+        font-weight: bold;
+      }
       .list-group{
         .list-group-item{
           .avatar{
             width: 40px;
             height: 40px;
             border-radius: 50%;
+            border: 2px solid transparent;
             float: left;
           }
         }
