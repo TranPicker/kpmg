@@ -40,6 +40,9 @@ $(document).ready(function () {
     setColorProfile('.border-profile','border-color');
     // set title-profile
     setColorProfile('.title-profile','color');
+    setColorProfile('.number-percent','color');
+    setColorProfile('.progress-bar','background-color');
+    setColorProfile('.favarite-title','color');
 
 });
 

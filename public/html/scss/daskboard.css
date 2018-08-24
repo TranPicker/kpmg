@@ -189,16 +189,14 @@ i.icon.delete:before {
       font-size: 16px; }
   .sidenav .top-favorite .favarite-title {
     font-size: 18px;
-    font-weight: bold;
-    color: #b7204d; }
+    font-weight: bold; }
   .sidenav .top-favorite .title {
     text-align: left;
     width: 30%; }
   .sidenav .top-favorite .progress-bar {
     width: 40px;
     height: 9px;
-    border-radius: 20px;
-    background: #b7204d; }
+    border-radius: 20px; }
   .sidenav .top-favorite .number-percent {
     color: #b7204d; }
   .sidenav .btn-email {
@@ -258,16 +256,14 @@ i.icon.delete:before {
         font-size: 16px; }
     .detail-member .modal-dialog .modal-content .left .top-favorite .favarite-title {
       font-size: 18px;
-      font-weight: bold;
-      color: #b7204d; }
+      font-weight: bold; }
     .detail-member .modal-dialog .modal-content .left .top-favorite .title {
       text-align: left;
       width: 30%; }
     .detail-member .modal-dialog .modal-content .left .top-favorite .progress-bar {
       width: 40px;
       height: 9px;
-      border-radius: 20px;
-      background: #b7204d; }
+      border-radius: 20px; }
     .detail-member .modal-dialog .modal-content .left .top-favorite .number-percent {
       color: #b7204d; }
     .detail-member .modal-dialog .modal-content .left .btn-email {
