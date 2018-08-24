@@ -107,6 +107,8 @@ html {
           border-radius: 30px !important;
           z-index: 12 !important;
           background: #ffffff; }
+          html body .content-right .show-content-right .tab-content .tab-pane .current-report i {
+            cursor: pointer; }
         html body .content-right .show-content-right .tab-content .tab-pane .btn-zoom-group {
           position: relative;
           z-index: 999; }
