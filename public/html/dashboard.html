@@ -96,7 +96,7 @@
                            <li class="nav-item">
                              <a class="nav-link text-uppercase" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="profile" aria-selected="false">OVERVIEW</a>
                            </li>
-                           <a href="#" class="chat"><img src="images/icon/ico_chat.png" alt=""></a>
+                           <a href="#" class="chat" onclick="openChatBox('#chat-box')"><img src="images/icon/ico_chat.png" alt=""></a>
 
 
                          </ul>
@@ -387,6 +387,29 @@
                 <!-- button Send Email-->
         </div>
             <!--box member-detail -->
+       <!--Box chat-->
+       <div id="chat-box" class="sidenav p-3">
+           <div class="chat h-100">
+                <div class="title-chat  bg-dark text-white d-flex align-items-center">
+                    <i class="fas fa-times mr-3" onclick="closeChatBox('#chat-box')"></i>
+                    <div class="title-name">F.R.E.D Meassage</div>
+                </div>
+                <div class="area-chat">
+                   <div class="rules"><i class="fas fa-file-alt mr-1"></i> Rules</div>
+                       <div class="example-chat d-flex align-items-center">
+                           <img src="images/KPMG.png" class="float-left  mr-3" alt="">
+                           <div class="text">
+                               <span class="d-block text-muted">3:28 PM</span>
+                               <p class="hello">Hi Marvie! Great to see you here again!<br> Have a great day ahead :D</p>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="input-chat d-flex align-items-center">
+                    <input class="chats mr-2 ml-4" name="chat" id="chat" placeholder="Hello Guys..."><img src="images/icon/ico_send.png" alt="">
+                </div>
+           </div>
+        </div>
+       <!--End box chat-->
        <!--end box left-->
 
        <!-- Modal Box-->

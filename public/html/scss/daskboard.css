@@ -288,4 +288,44 @@ i.icon.delete:before {
   height: 40px;
   border-radius: 50%; }
 
+#chat-box {
+  box-shadow: 1px 1px 9px 1px #888888;
+  width: 350px;
+  height: 500px;
+  right: -350px;
+  top: unset;
+  bottom: 80px;
+  padding: 0 !important; }
+  #chat-box .chat .title-chat {
+    padding: 18px; }
+    #chat-box .chat .title-chat .title-name {
+      font-size: 20px; }
+    #chat-box .chat .title-chat i {
+      font-size: 21px;
+      cursor: pointer; }
+  #chat-box .chat .area-chat {
+    position: relative;
+    height: 80%; }
+    #chat-box .chat .area-chat .rules {
+      position: absolute;
+      top: 7px;
+      right: 15px;
+      color: #90959a;
+      font-size: 19px;
+      cursor: pointer; }
+    #chat-box .chat .area-chat .example-chat {
+      position: absolute;
+      left: 14px;
+      bottom: 10px; }
+      #chat-box .chat .area-chat .example-chat img {
+        width: 30px;
+        height: 30px; }
+      #chat-box .chat .area-chat .example-chat .text {
+        font-size: 14px; }
+  #chat-box .chat .input-chat .chats {
+    width: 77%;
+    height: 35px; }
+  #chat-box .chat .input-chat img {
+    cursor: pointer; }
+
 /*# sourceMappingURL=daskboard.css.map */

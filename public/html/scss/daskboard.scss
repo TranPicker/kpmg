@@ -6,6 +6,7 @@ $auditColor : #0191d8;
 $taxColor : #bc1f4a;
 $advisoryColor : #eaaa00;
 $centralsrvColor : #c3007b;
+$normalColor : #90959a;
 @font-face {
   font-family: 'KPMG';
   src: url('./../fonts/KPMG-Light.eot');
@@ -19,7 +20,7 @@ $centralsrvColor : #c3007b;
 }
 
 a{
-  color: #90959a;
+  color: $normalColor;
 }
 .bg-audit{
   background: $auditColor!important;
@@ -430,17 +431,72 @@ i.icon.delete:before{
           }
         }
       }
-
     }
   }
 }
+//css chat modal
 // end css modal box
-
-
-
 
 .avatar{
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+#chat-box{
+  box-shadow: 1px 1px 9px 1px #888888;
+  width: 350px;
+  height: 500px;
+  right: -350px;
+  top: unset;
+  bottom: 80px;
+  padding: 0 !important;
+  .chat{
+    .title-chat{
+      padding: 18px;
+      .title-name{
+        font-size: 20px;
+      }
+      i{
+        font-size: 21px;
+        cursor: pointer;
+      }
+    }
+    .area-chat{
+      position: relative;
+      height: 80%;
+      .rules{
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        color: $normalColor;
+        font-size: 19px;
+        cursor: pointer;
+      }
+      .example-chat{
+        position: absolute;
+        left: 14px;
+        bottom: 10px;
+        img{
+          width: 30px;
+          height: 30px;
+        }
+        .text{
+          font-size: 14px;
+          .hello{
+
+          }
+        }
+      }
+    }
+    .input-chat{
+      .chats{
+        width: 77%;
+        height: 35px;
+      }
+      img{
+        cursor: pointer;
+      }
+    }
+
+  }
 }

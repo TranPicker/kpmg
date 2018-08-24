@@ -138,7 +138,12 @@ function zoomout() {
 function openNav(ele) {
     $(ele).css('right', '0');
 }
-
 function closeNav(ele) {
     $(ele).css('right', '-250px');
+}
+function openChatBox(ele){
+    $(ele).css('right','20px');
+}
+function closeChatBox(ele) {
+    $(ele).css('right', '-350px');
 }
